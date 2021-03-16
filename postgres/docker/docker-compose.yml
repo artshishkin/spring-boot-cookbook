@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: cookbook_user
+      POSTGRES_PASSWORD: cookbook_password
+      POSTGRES_DB: cookbook_db
+    ports:
+      - 25432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
