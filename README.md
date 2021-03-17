@@ -23,4 +23,15 @@ Spring Boot Cookbook - Tutorial from SFG in courses `Spring Framework 5` and `Do
 3.  To run Oracle DB in Docker container you must go to Docker Hub and `Proceed to Checkout`
     -  and Login to Oracle account (you must have)
     -  it is helpful to view [Reviews](https://hub.docker.com/_/oracle-database-enterprise-edition?tab=reviews) 
+
+####  516/100. Spring Boot Neo4J Example
+
+1.  Start Neo4j Docker container
+2.  Change default password
+    -  login `neo4j/neo4j` to `http://localhost:7474`
+    -  new password - `test`
+    -  confirm new password - `test`
+3.  Start spring boot application
+4.  Test it     
+
     
