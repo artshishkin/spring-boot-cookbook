@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class ProductForm {
-    private Long id;
+    private String id;
     private String description;
     private BigDecimal price;
     private String imageUrl;

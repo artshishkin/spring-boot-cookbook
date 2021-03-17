@@ -9,11 +9,11 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-@RedisHash
+@RedisHash("products")
 public class Product {
 
     @Id
-    private Long id;
+    private String id;
     private String description;
     private BigDecimal price;
     private String imageUrl;

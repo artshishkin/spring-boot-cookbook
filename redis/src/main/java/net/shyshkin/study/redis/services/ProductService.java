@@ -10,11 +10,11 @@ public interface ProductService {
 
     List<Product> listAll();
 
-    Product getById(Long id);
+    Product getById(String id);
 
     Product saveOrUpdate(Product product);
 
-    void delete(Long id);
+    void delete(String id);
 
     Product saveOrUpdateProductForm(ProductForm productForm);
 }

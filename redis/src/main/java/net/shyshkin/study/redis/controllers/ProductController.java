@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.UUID;
 
 @Controller
 public class ProductController {
@@ -42,13 +43,13 @@ public class ProductController {
     }
 
     @RequestMapping("/product/show/{id}")
-    public String getProduct(@PathVariable Long id, Model model){
+    public String getProduct(@PathVariable String id, Model model){
         model.addAttribute("product", productService.getById(id));
         return "product/show";
     }
 
     @RequestMapping("product/edit/{id}")
-    public String edit(@PathVariable Long id, Model model){
+    public String edit(@PathVariable String id, Model model){
         Product product = productService.getById(id);
         ProductForm productForm = productToProductForm.convert(product);
 
@@ -58,7 +59,9 @@ public class ProductController {
 
     @RequestMapping("/product/new")
     public String newProduct(Model model){
-        model.addAttribute("productForm", new ProductForm());
+        ProductForm productForm = new ProductForm();
+        productForm.setId(UUID.randomUUID().toString());
+        model.addAttribute("productForm", productForm);
         return "product/productform";
     }
 
@@ -75,7 +78,7 @@ public class ProductController {
     }
 
     @RequestMapping("/product/delete/{id}")
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable String id){
         productService.delete(id);
         return "redirect:/product/list";
     }
