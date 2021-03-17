@@ -13,4 +13,14 @@ Spring Boot Cookbook - Tutorial from SFG in courses `Spring Framework 5` and `Do
 -  Sometimes hangs when `(*) Creating database testdb ... `
     -  Wait a little bit
     -  Sometimes it is helpful to `wsl --shutdown` and restart Docker Desktop on Windows    
+
+####  515/99. Spring Boot Oracle Example
+
+1.  SFG says:
+    *  To run this example you will need to download and install the Oracle JDBC driver.
+    *  You can install the Oracle Jar into your local Maven repsository using this command: `mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar`
+2.  But I used `ojdbc8` from `com.oracle.database.jdbc`
+3.  To run Oracle DB in Docker container you must go to Docker Hub and `Proceed to Checkout`
+    -  and Login to Oracle account (you must have)
+    -  it is helpful to view [Reviews](https://hub.docker.com/_/oracle-database-enterprise-edition?tab=reviews) 
     
