@@ -17,7 +17,7 @@ public class MessageListener {
 
     private final ProductRepository productRepository;
 
-    @JmsListener(destination = JmsConfig.PRODUCT_MESSAGE_QUEUE)
+    @JmsListener(destination = "${app.product-message-queue}")
     public void receiveMessage(Map<String, String> message) {
         log.info("Received <" + message + ">");
         Long id = Long.valueOf(message.get("id"));

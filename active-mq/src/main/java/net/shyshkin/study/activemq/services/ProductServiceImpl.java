@@ -25,6 +25,9 @@ public class ProductServiceImpl implements ProductService {
     private final ProductFormToProduct productFormToProduct;
     private final JmsTemplate jmsTemplate;
 
+    @Value("${app.product-message-queue}")
+    private String productMessageQueue;
+
     @Override
     public List<Product> listAll() {
         List<Product> products = new ArrayList<>();
@@ -61,6 +64,6 @@ public class ProductServiceImpl implements ProductService {
         Map<String, String> actionmap = new HashMap<>();
         actionmap.put("id", id);
         log.info("Sending the index request through queue message");
-        jmsTemplate.convertAndSend(JmsConfig.PRODUCT_MESSAGE_QUEUE, actionmap);
+        jmsTemplate.convertAndSend(productMessageQueue, actionmap);
     }
 }

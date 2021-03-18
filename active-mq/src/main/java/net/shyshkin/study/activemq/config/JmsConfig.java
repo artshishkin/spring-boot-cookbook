@@ -7,6 +7,4 @@ import org.springframework.jms.annotation.EnableJms;
 @Configuration
 public class JmsConfig {
 
-    public static final String PRODUCT_MESSAGE_QUEUE = "product_message_queue";
-
 }

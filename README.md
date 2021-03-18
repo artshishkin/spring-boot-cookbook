@@ -18,7 +18,7 @@ Spring Boot Cookbook - Tutorial from SFG in courses `Spring Framework 5` and `Do
 
 1.  SFG says:
     *  To run this example you will need to download and install the Oracle JDBC driver.
-    *  You can install the Oracle Jar into your local Maven repsository using this command: `mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar`
+    *  You can install the Oracle Jar into your local Maven repository using this command: `mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar`
 2.  But I used `ojdbc8` from `com.oracle.database.jdbc`
 3.  To run Oracle DB in Docker container you must go to Docker Hub and `Proceed to Checkout`
     -  and Login to Oracle account (you must have)
@@ -34,4 +34,7 @@ Spring Boot Cookbook - Tutorial from SFG in courses `Spring Framework 5` and `Do
 3.  Start spring boot application
 4.  Test it     
 
-    
+####  519/103. Spring Boot ActiveMQ Example
+
+1.  View SFG [README](active-mq/README.md) to run demo app for ActiveMQ
+2.  Use [docker-compose.yml](active-mq/docker/docker-compose.yml) to run MySQL and ActiveMQ instead of Real MySQL and Embedded ActiveMQ  
