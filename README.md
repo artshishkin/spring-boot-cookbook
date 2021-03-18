@@ -37,4 +37,12 @@ Spring Boot Cookbook - Tutorial from SFG in courses `Spring Framework 5` and `Do
 ####  519/103. Spring Boot ActiveMQ Example
 
 1.  View SFG [README](active-mq/README.md) to run demo app for ActiveMQ
-2.  Use [docker-compose.yml](active-mq/docker/docker-compose.yml) to run MySQL and ActiveMQ instead of Real MySQL and Embedded ActiveMQ  
+2.  Use [docker-compose.yml](active-mq/docker/docker-compose.yml) to run MySQL and ActiveMQ instead of Real MySQL and Embedded ActiveMQ
+
+####  520/104. Spring Boot RabbitMQ Example
+
+1.  View SFG [README](rabbit-mq/README.md) to run demo app for RabbitMQ
+2.  Use [docker-compose.yml](rabbit-mq/docker/docker-compose.yml) to run MySQL and RabbitMQ
+
+
+  
