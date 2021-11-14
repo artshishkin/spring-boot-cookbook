@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 
 services:
   mysql:
@@ -10,3 +10,14 @@ services:
       MYSQL_USER: cookbook_user
       MYSQL_PASSWORD: cookbook_password
       MYSQL_DATABASE: cookbook_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+volumes:
+  mysql-data:
